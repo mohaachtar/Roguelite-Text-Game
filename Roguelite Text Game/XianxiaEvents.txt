@@ -1,0 +1,11 @@
+﻿TEST
+this is a test event that always rolls, do not mind me!
+1
+0
+0
+0
+100
+1
+Mortal,Foundation Establishment
+test tag
+tag to add test
