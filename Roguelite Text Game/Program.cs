@@ -16,7 +16,7 @@ namespace Roguelite_Text_Game
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EventEditorForm());
+            Application.Run(new GameEditor());
         }
     }
 }

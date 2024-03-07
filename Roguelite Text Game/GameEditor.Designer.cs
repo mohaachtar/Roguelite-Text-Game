@@ -1,6 +1,6 @@
 ﻿namespace Roguelite_Text_Game
 {
-    partial class EventEditorForm
+    partial class GameEditor
     {
         /// <summary>
         /// Required designer variable.
@@ -57,6 +57,20 @@
             this.SaveEventFileButton = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.AddEventButton = new System.Windows.Forms.Button();
+            this.StagesListBox = new System.Windows.Forms.ListBox();
+            this.StageFileSelectButton = new System.Windows.Forms.Button();
+            this.SaveStageFileButton = new System.Windows.Forms.Button();
+            this.AddStageButton = new System.Windows.Forms.Button();
+            this.RemoveEventButton = new System.Windows.Forms.Button();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.StageNameTextBox = new System.Windows.Forms.TextBox();
+            this.LifeSpanTextBox = new System.Windows.Forms.TextBox();
+            this.GoalTextBox = new System.Windows.Forms.TextBox();
+            this.StageUpButton = new System.Windows.Forms.Button();
+            this.StageDownButton = new System.Windows.Forms.Button();
+            this.RemoveStageButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,9 +80,9 @@
             // 
             // EventSelectButton
             // 
-            this.EventSelectButton.Location = new System.Drawing.Point(202, 309);
+            this.EventSelectButton.Location = new System.Drawing.Point(12, 310);
             this.EventSelectButton.Name = "EventSelectButton";
-            this.EventSelectButton.Size = new System.Drawing.Size(248, 23);
+            this.EventSelectButton.Size = new System.Drawing.Size(177, 23);
             this.EventSelectButton.TabIndex = 0;
             this.EventSelectButton.Text = "Select Event File";
             this.EventSelectButton.UseVisualStyleBackColor = true;
@@ -79,7 +93,7 @@
             this.EventListBox.FormattingEnabled = true;
             this.EventListBox.Location = new System.Drawing.Point(12, 12);
             this.EventListBox.Name = "EventListBox";
-            this.EventListBox.Size = new System.Drawing.Size(177, 537);
+            this.EventListBox.Size = new System.Drawing.Size(177, 290);
             this.EventListBox.TabIndex = 1;
             this.EventListBox.SelectedIndexChanged += new System.EventHandler(this.EventListBox_SelectedIndexChanged);
             // 
@@ -304,9 +318,9 @@
             // 
             // SaveEventFileButton
             // 
-            this.SaveEventFileButton.Location = new System.Drawing.Point(202, 338);
+            this.SaveEventFileButton.Location = new System.Drawing.Point(12, 339);
             this.SaveEventFileButton.Name = "SaveEventFileButton";
-            this.SaveEventFileButton.Size = new System.Drawing.Size(248, 23);
+            this.SaveEventFileButton.Size = new System.Drawing.Size(177, 23);
             this.SaveEventFileButton.TabIndex = 3;
             this.SaveEventFileButton.Text = "Save Event File";
             this.SaveEventFileButton.UseVisualStyleBackColor = true;
@@ -314,29 +328,174 @@
             // 
             // AddEventButton
             // 
-            this.AddEventButton.Location = new System.Drawing.Point(203, 368);
+            this.AddEventButton.Location = new System.Drawing.Point(12, 368);
             this.AddEventButton.Name = "AddEventButton";
-            this.AddEventButton.Size = new System.Drawing.Size(247, 23);
+            this.AddEventButton.Size = new System.Drawing.Size(177, 23);
             this.AddEventButton.TabIndex = 4;
             this.AddEventButton.Text = "Add Event";
             this.AddEventButton.UseVisualStyleBackColor = true;
             this.AddEventButton.Click += new System.EventHandler(this.AddEventButton_Click);
             // 
-            // EventEditorForm
+            // StagesListBox
+            // 
+            this.StagesListBox.FormattingEnabled = true;
+            this.StagesListBox.Location = new System.Drawing.Point(202, 309);
+            this.StagesListBox.Name = "StagesListBox";
+            this.StagesListBox.Size = new System.Drawing.Size(153, 160);
+            this.StagesListBox.TabIndex = 5;
+            this.StagesListBox.SelectedIndexChanged += new System.EventHandler(this.StagesListBox_SelectedIndexChanged);
+            // 
+            // StageFileSelectButton
+            // 
+            this.StageFileSelectButton.Location = new System.Drawing.Point(362, 310);
+            this.StageFileSelectButton.Name = "StageFileSelectButton";
+            this.StageFileSelectButton.Size = new System.Drawing.Size(114, 23);
+            this.StageFileSelectButton.TabIndex = 6;
+            this.StageFileSelectButton.Text = "Select Stage File";
+            this.StageFileSelectButton.UseVisualStyleBackColor = true;
+            this.StageFileSelectButton.Click += new System.EventHandler(this.StageFileSelectButton_Click);
+            // 
+            // SaveStageFileButton
+            // 
+            this.SaveStageFileButton.Location = new System.Drawing.Point(362, 339);
+            this.SaveStageFileButton.Name = "SaveStageFileButton";
+            this.SaveStageFileButton.Size = new System.Drawing.Size(114, 23);
+            this.SaveStageFileButton.TabIndex = 7;
+            this.SaveStageFileButton.Text = "Save Stage File";
+            this.SaveStageFileButton.UseVisualStyleBackColor = true;
+            this.SaveStageFileButton.Click += new System.EventHandler(this.SaveStageFileButton_Click);
+            // 
+            // AddStageButton
+            // 
+            this.AddStageButton.Location = new System.Drawing.Point(362, 368);
+            this.AddStageButton.Name = "AddStageButton";
+            this.AddStageButton.Size = new System.Drawing.Size(114, 23);
+            this.AddStageButton.TabIndex = 8;
+            this.AddStageButton.Text = "Add Stage File";
+            this.AddStageButton.UseVisualStyleBackColor = true;
+            this.AddStageButton.Click += new System.EventHandler(this.AddStageButton_Click);
+            // 
+            // RemoveEventButton
+            // 
+            this.RemoveEventButton.Location = new System.Drawing.Point(12, 397);
+            this.RemoveEventButton.Name = "RemoveEventButton";
+            this.RemoveEventButton.Size = new System.Drawing.Size(177, 23);
+            this.RemoveEventButton.TabIndex = 9;
+            this.RemoveEventButton.Text = "Remove Event";
+            this.RemoveEventButton.UseVisualStyleBackColor = true;
+            this.RemoveEventButton.Click += new System.EventHandler(this.RemoveEventButton_Click);
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(362, 397);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.ReadOnly = true;
+            this.textBox12.Size = new System.Drawing.Size(114, 20);
+            this.textBox12.TabIndex = 22;
+            this.textBox12.Text = "Stage Name";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(362, 423);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
+            this.textBox13.Size = new System.Drawing.Size(114, 20);
+            this.textBox13.TabIndex = 23;
+            this.textBox13.Text = "Life Span";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(362, 449);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.ReadOnly = true;
+            this.textBox14.Size = new System.Drawing.Size(114, 20);
+            this.textBox14.TabIndex = 24;
+            this.textBox14.Text = "Goal";
+            // 
+            // StageNameTextBox
+            // 
+            this.StageNameTextBox.Location = new System.Drawing.Point(482, 397);
+            this.StageNameTextBox.Name = "StageNameTextBox";
+            this.StageNameTextBox.Size = new System.Drawing.Size(141, 20);
+            this.StageNameTextBox.TabIndex = 22;
+            this.StageNameTextBox.TextChanged += new System.EventHandler(this.StageNameTextBox_TextChanged);
+            // 
+            // LifeSpanTextBox
+            // 
+            this.LifeSpanTextBox.Location = new System.Drawing.Point(482, 423);
+            this.LifeSpanTextBox.Name = "LifeSpanTextBox";
+            this.LifeSpanTextBox.Size = new System.Drawing.Size(141, 20);
+            this.LifeSpanTextBox.TabIndex = 25;
+            this.LifeSpanTextBox.TextChanged += new System.EventHandler(this.LifeSpanTextBox_TextChanged);
+            // 
+            // GoalTextBox
+            // 
+            this.GoalTextBox.Location = new System.Drawing.Point(482, 449);
+            this.GoalTextBox.Name = "GoalTextBox";
+            this.GoalTextBox.Size = new System.Drawing.Size(141, 20);
+            this.GoalTextBox.TabIndex = 26;
+            this.GoalTextBox.TextChanged += new System.EventHandler(this.GoalTextBox_TextChanged);
+            // 
+            // StageUpButton
+            // 
+            this.StageUpButton.Location = new System.Drawing.Point(482, 310);
+            this.StageUpButton.Name = "StageUpButton";
+            this.StageUpButton.Size = new System.Drawing.Size(141, 23);
+            this.StageUpButton.TabIndex = 27;
+            this.StageUpButton.Text = "Move Stage Up";
+            this.StageUpButton.UseVisualStyleBackColor = true;
+            this.StageUpButton.Click += new System.EventHandler(this.StageUpButton_Click);
+            // 
+            // StageDownButton
+            // 
+            this.StageDownButton.Location = new System.Drawing.Point(482, 339);
+            this.StageDownButton.Name = "StageDownButton";
+            this.StageDownButton.Size = new System.Drawing.Size(141, 23);
+            this.StageDownButton.TabIndex = 28;
+            this.StageDownButton.Text = "Move Stage Down";
+            this.StageDownButton.UseVisualStyleBackColor = true;
+            this.StageDownButton.Click += new System.EventHandler(this.StageDownButton_Click);
+            // 
+            // RemoveStageButton
+            // 
+            this.RemoveStageButton.Location = new System.Drawing.Point(482, 368);
+            this.RemoveStageButton.Name = "RemoveStageButton";
+            this.RemoveStageButton.Size = new System.Drawing.Size(141, 23);
+            this.RemoveStageButton.TabIndex = 29;
+            this.RemoveStageButton.Text = "Remove Stage";
+            this.RemoveStageButton.UseVisualStyleBackColor = true;
+            this.RemoveStageButton.Click += new System.EventHandler(this.RemoveStageButton_Click);
+            // 
+            // GameEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1404, 564);
+            this.ClientSize = new System.Drawing.Size(1404, 482);
+            this.Controls.Add(this.RemoveStageButton);
+            this.Controls.Add(this.StageDownButton);
+            this.Controls.Add(this.StageUpButton);
+            this.Controls.Add(this.GoalTextBox);
+            this.Controls.Add(this.LifeSpanTextBox);
+            this.Controls.Add(this.StageNameTextBox);
+            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.RemoveEventButton);
+            this.Controls.Add(this.AddStageButton);
+            this.Controls.Add(this.SaveStageFileButton);
+            this.Controls.Add(this.StageFileSelectButton);
+            this.Controls.Add(this.StagesListBox);
             this.Controls.Add(this.AddEventButton);
             this.Controls.Add(this.SaveEventFileButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.EventListBox);
             this.Controls.Add(this.EventSelectButton);
-            this.Name = "EventEditorForm";
-            this.Text = "Form2";
+            this.Name = "GameEditor";
+            this.Text = "Game Editor";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -371,5 +530,19 @@
         private System.Windows.Forms.Button SaveEventFileButton;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button AddEventButton;
+        private System.Windows.Forms.ListBox StagesListBox;
+        private System.Windows.Forms.Button StageFileSelectButton;
+        private System.Windows.Forms.Button SaveStageFileButton;
+        private System.Windows.Forms.Button AddStageButton;
+        private System.Windows.Forms.Button RemoveEventButton;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox StageNameTextBox;
+        private System.Windows.Forms.TextBox LifeSpanTextBox;
+        private System.Windows.Forms.TextBox GoalTextBox;
+        private System.Windows.Forms.Button StageUpButton;
+        private System.Windows.Forms.Button StageDownButton;
+        private System.Windows.Forms.Button RemoveStageButton;
     }
 }

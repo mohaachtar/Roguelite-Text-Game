@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EventEditorForm.cs">
+    <Compile Include="GameEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EventEditorForm.Designer.cs">
-      <DependentUpon>EventEditorForm.cs</DependentUpon>
+    <Compile Include="GameEditor.Designer.cs">
+      <DependentUpon>GameEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="RandomEvent.cs" />
     <Compile Include="PlayerCharacter.cs" />
@@ -63,8 +63,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="EventEditorForm.resx">
-      <DependentUpon>EventEditorForm.cs</DependentUpon>
+    <EmbeddedResource Include="GameEditor.resx">
+      <DependentUpon>GameEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameForm.resx">
       <DependentUpon>GameForm.cs</DependentUpon>
